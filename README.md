@@ -9,3 +9,10 @@ The compiler searches for directories in the following order:
 Directories containing the source file.
 Directories specified with the /I option, in the order that CL encounters them.
 Directories specified in the INCLUDE environment variable.
+
+###2. ActiveX 无效参数数目，非选择性参数错误
+控件内部是根据调用方传来的 ID 区寻找内部的函数的，ID给错了，就调用不到或调用到其他函数里了。
+vs2010 通过添加接口，已经全部用 DISP_FUNCTION_ID 格式，
+而vc6.0 则是DISP_FUNCTION格式（不加 _ID）
+http://www.cnblogs.com/scotth/p/3667192.html
+
